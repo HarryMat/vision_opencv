@@ -14,16 +14,18 @@ if(NOT ANDROID)
     find_package(Boost REQUIRED python)
   endif()
 else()
-find_package(Boost REQUIRED)
+  find_package(Boost REQUIRED)
 endif()
 
-set(_opencv_version 4)
-find_package(OpenCV 4 QUIET)
-if(NOT OpenCV_FOUND)
-  message(STATUS "Did not find OpenCV 4, trying OpenCV 3")
-  set(_opencv_version 3)
-endif()
+#set(_opencv_version 4)
+#find_package(OpenCV 4 QUIET)
+#if(NOT OpenCV_FOUND)
+#  message(STATUS "Did not find OpenCV 4, trying OpenCV 3")
+#  set(_opencv_version 3)
+#endif()
 
+set(_opencv_version 3)
+set(OpenCV_DIR "~/projects/opencv-3.4.14/build/install/share/OpenCV")
 find_package(OpenCV ${_opencv_version} REQUIRED
   COMPONENTS
     opencv_core

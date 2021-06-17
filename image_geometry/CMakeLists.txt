@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0.2)
 project(image_geometry)
 
 find_package(catkin REQUIRED sensor_msgs)
+set(OpenCV_DIR "~/projects/opencv-3.4.14/build/install/share/OpenCV")
 find_package(OpenCV REQUIRED)
 
 catkin_package(CATKIN_DEPENDS sensor_msgs
