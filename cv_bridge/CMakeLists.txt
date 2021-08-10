@@ -13,6 +13,8 @@ if(NOT ANDROID)
 else()
 find_package(Boost REQUIRED)
 endif()
+
+set(OpenCV_DIR ~/projects/opencv-3.4.14/build/install/share/OpenCV)
 find_package(OpenCV 3 REQUIRED
   COMPONENTS
     opencv_core
